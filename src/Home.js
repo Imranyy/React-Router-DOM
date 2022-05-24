@@ -1,11 +1,17 @@
 import React from 'react'
+import Post from './Post'
 
-const Home = () => {
+const Home = ({posts}) => {
+
     return (
-        <div>
-            <h1>Home</h1>
+        <div className="posts">
+
+            {posts.map((post =>
+                    < Post post={post}/>
+                
+                ))}
         </div>
     )
 }
 
-export default Home
+export default Home;
